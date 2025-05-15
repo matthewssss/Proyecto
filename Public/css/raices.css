@@ -9,6 +9,7 @@ p {
     width: 30%;
     transition: 0.5s;
     margin: 20px;
+    min-width: 250px;
 }
 
 .card-animate:hover {

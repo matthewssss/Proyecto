@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="author" content="templatemo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nuestras ramas</title>
+    <base href="/Public/pages/">
+    <link rel="icon" href="/Public/images/icon.png" type="image/png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- LIBRERIAS -->
+    <link rel="stylesheet" href="../../Vendor/Frontend/Bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../Vendor/Frontend/TailWind/output.css"> 
+    <link rel="stylesheet" href="../../Vendor/Frontend/FontAwesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../../Vendor/Frontend/FontAwesome/css/all.css">
+    <link rel="stylesheet" href="../../Vendor/Frontend/OwlCarousel/assets/owl.carousel.css" />
+    <link rel="stylesheet" href="../../Vendor/Frontend/Animate/animate.css" />
+    <link rel="stylesheet" href="../../Vendor/Frontend/Swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../Vendor/Frontend/SweetAlert/sweetalert2.min.css">
+
+    <!-- CSS PROPIO -->
+    <link rel="stylesheet" href="../../Public/css/templatemo-snapx-photography.css"/>
+    <link rel="stylesheet" href="../../Public/css/styles.css"/>
+  <!--
+
+TemplateMo 576 SnapX Photography
+
+https://templatemo.com/tm-576-snapx-photography
+
+-->
+  </head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="/inicio" class="logo">
+              <img src="/Public/images/florDeLis.png" alt="Flor de Lis" />
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="/inicio" class="active">Inicio</a></li>
+              <li class="has-sub">
+                <a href="javascript:void(0)">Nuestro grupo</a>
+                <ul class="sub-menu">
+                  <li><a href="/ramas">Nuestras ramas</a></li>
+                  <li>
+                    <a href="/raices-scout">Nuestras raices</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
+              <li><a href="/circulares">Circulares</a></li>
+            </ul>
+            <div class="border-button">
+              <a class="btn custom-tooltip-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <i class="fa fa-user"></i>
+              </a>
+            </div>
+            <a class="menu-trigger">
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+    <!-- Offcanvas -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Cargar una página externa dentro del iframe -->
+        <iframe id="userIframe" style="width:100%; height:100%; border:none;"></iframe>
+      </div>
+    </div>
+
+  <!-- ***** Header Area End ***** -->
+  <div id="modal_container"></div>
+
+  <div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 header-text text-center">
+          <h2>Conoce las distintas <em>ramas scout</em></h2>
+          <p>Desde los más pequeños hasta el equipo de responsables, cada rama vive el escultismo a su manera. Descubre cómo crecen, aprenden y construyen juntos en el grupo.</p>
+        </div>
+      </div>      
+    </div>
+  </div>
+
+  <div class="top-categories">
+    <div class="container">
+      <div class="row">
+  
+        <!-- Lobatos -->
+        <div class="col-lg col-sm-4">
+          <div class="item">
+            <div class="icon">
+              <img src="/Public/images/Unidades/lobatos.webp" alt="Lobatos">
+            </div>
+            <h4>Lobatos</h4>
+            <span>Seisenas</span>
+            <span class="counter">9-11 años</span>
+          </div>
+        </div>
+  
+        <!-- Rangers -->
+        <div class="col-lg col-sm-4">
+          <div class="item">
+            <div class="icon">
+              <img src="/Public/images/Unidades/exploradores.webp" alt="Rangers">
+            </div>
+            <h4>Exploradores</h4>
+            <span>Patrullas</span>
+            <span class="counter">11-14 años</span>
+          </div>
+        </div>
+  
+        <!-- Pioneros -->
+        <div class="col-lg col-sm-4">
+          <div class="item">
+            <div class="icon">
+              <img src="/Public/images/Unidades/pioneros.webp" alt="Pioneros">
+            </div>
+            <h4>Pioneros</h4>
+            <span>Equipos</span>
+            <span class="counter">15-18 años</span>
+          </div>
+        </div>
+  
+        <!-- Rutas -->
+        <div class="col-lg col-sm-4">
+          <div class="item">
+            <div class="icon">
+              <img src="/Public/images/Unidades/rutas.webp" alt="Rutas">
+            </div>
+            <h4>Rutas</h4>
+            <span>Clanes</span>
+            <span class="counter">18-21 años</span>
+          </div>
+        </div>
+  
+        <!-- Kraal -->
+        <div class="col-lg col-sm-4">
+          <div class="item">
+            <div class="icon">
+              <img src="/Public/images/Unidades/kraal.webp" alt="Kraal">
+            </div>
+            <h4>Kraal</h4>
+            <span>Kraaletes</span>
+            <span class="counter">21+</span>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+
+  <section class="featured-contests">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading text-center">
+            <h6>Fotos destacadas</h6>
+            <h4>Imágenes <em>icónicas</em> de nuestras <em>ramas</em></h4>            
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="item">
+            <div class="thumb imggrande">
+              <img src="/Public/images/Ramas/brujulas.jpg" alt="Taller de Supervivencia Exploradores">
+              <div class="hover-effect">
+                <div class="content">
+                  <div class="top-content" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+                    <span class="calendar" style="display: flex; align-items: center; gap: 6px;">
+                      <span class="iconify" data-icon="mdi:calendar-month" data-width="20" data-height="20"></span>
+                      Abril 2024
+                    </span>
+                    <span class="location" style="display: flex; align-items: center; gap: 6px;">
+                      <span class="iconify" data-icon="mdi:map-marker" data-width="20" data-height="20"></span>
+                      Monte de El Pardo
+                    </span>
+                  </div>
+                  <h4>Taller de Supervivencia</h4>
+                  <div class="icon hovercard">
+                    <img src="/Public/images/Unidades/exploradores.webp" alt="Exploradores">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+
+        <div class="col-lg-6">
+          <div class="item">
+            <div class="thumb imggrande">
+              <img src="/Public/images/Ramas/marcha.jpg" alt="Marcha Lobatos en La Gándara">
+              <div class="hover-effect">
+                <div class="content">
+                  <div class="top-content" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+                    <span class="calendar" style="display: flex; align-items: center; gap: 6px;">
+                      <span class="iconify" data-icon="mdi:calendar-month" data-width="20" data-height="20"></span>
+                      Julio 2024
+                    </span>
+                    <span class="location" style="display: flex; align-items: center; gap: 6px;">
+                      <span class="iconify" data-icon="mdi:map-marker" data-width="20" data-height="20"></span>
+                      La Gándara, Cantabria
+                    </span>
+                  </div>
+                  <h4>Marcha de Lobatos</h4>
+                  <div class="icon hovercard">
+                    <img src="/Public/images/Unidades/lobatos.webp" alt="Lobatos">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4">
+          <div class="item">
+            <div class="thumb imgpequeña">
+              <img src="/Public/images/Ramas/paseo2.jpg" alt="Marcha de rutas">
+              <div class="hover-effect">
+                <div class="content">
+                  <div class="top-content" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+                    <span class="calendar" style="display: flex; align-items: center; gap: 6px;">
+                      <span class="iconify" data-icon="mdi:calendar-month" data-width="20" data-height="20"></span>
+                      Marzo 2023
+                    </span>
+                    <span class="location" style="display: flex; align-items: center; gap: 6px;">
+                      <span class="iconify" data-icon="mdi:map-marker" data-width="20" data-height="20"></span>
+                      Valsaín, Segovia
+                    </span>
+                  </div>
+                  <h4>Marcha de Rutas</h4>
+                  <div class="icon hovercard">
+                    <img src="/Public/images/Unidades/rutas.webp" alt="Rutas">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div class="col-lg-4">
+          <div class="item">
+            <div class="thumb imgpequeña">
+              <img src="/Public/images/Ramas/nudos.jpg" alt="Taller de nudos pioneros">
+              <div class="hover-effect">
+                <div class="content">
+                  <div class="top-content" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+                    <span class="calendar" style="display: flex; align-items: center; gap: 6px;">
+                      <span class="iconify" data-icon="mdi:calendar-month" data-width="20" data-height="20"></span>
+                      Mayo 2022
+                    </span>
+                    <span class="location" style="display: flex; align-items: center; gap: 6px;">
+                      <span class="iconify" data-icon="mdi:map-marker" data-width="20" data-height="20"></span>
+                      Pradena, Segovia
+                    </span>
+                  </div>
+                  <h4>Taller de nudos</h4>
+                  <div class="icon hovercard">
+                    <img src="/Public/images/Unidades/pioneros.webp" alt="Pioneros">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-4">
+          <div class="item">
+            <div class="thumb imgpequeña">
+              <img src="/Public/images/Ramas/encuentro.jpg" alt="Foto de grupo">
+              <div class="hover-effect">
+                <div class="content">
+                  <div class="top-content" style="display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+                    <span class="calendar" style="display: flex; align-items: center; gap: 6px;">
+                      <span class="iconify" data-icon="mdi:calendar-month" data-width="20" data-height="20"></span>
+                      Mayo 2022
+                    </span>
+                    <span class="location" style="display: flex; align-items: center; gap: 6px;">
+                      <span class="iconify" data-icon="mdi:map-marker" data-width="20" data-height="20"></span>
+                      Cobreros, Zamora
+                    </span>
+                  </div>
+                  <h4>Foto campamento</h4>
+                  <div class="icon hovercard">
+                    <img src="/Public/images/Unidades/kraal.webp" alt="Kraal">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading text-center">
+            <h6>Voces del Grupo</h6>
+            <h4>Coordinadores que <em>inspiran</em> con su <em>historia scout</em></h4>            
+          </div>
+        </div>
+        <div class="col-lg-8 offset-lg-2">
+          <div class="owl-testimonials owl-carousel">
+  
+            <!-- Lobatos -->
+            <div class="item">
+              <div class="content">
+                <div class="left-content">
+                  <p>“Comencé como lobata hace años y hoy tengo la suerte de acompañar a los lobatos en sus primeros pasos. Ver cómo crecen con ilusión es lo más bonito de ser monitor.”</p>
+                  <h4>Ana López</h4>
+                  <span>Coordinadora de Lobatos</span>
+                </div>
+                <div class="image">
+                  <img src="/Public/images/Ramas/coordi3.jpg" alt="Coordinadora Lobatos">
+                </div>
+              </div>
+            </div>
+  
+            <!-- Exploradores -->
+            <div class="item">
+              <div class="content">
+                <div class="left-content">
+                  <p>“Exploradores es la etapa donde los chavales se descubren a sí mismos. Acompañarlos en esa aventura es un reto precioso. Siempre aprendemos juntos.”</p>
+                  <h4>Jorge Martín</h4>
+                  <span>Coordinador de Exploradores</span>
+                </div>
+                <div class="image">
+                  <img src="/Public/images/Ramas/coordi2.jpg" alt="Coordinador Exploradores">
+                </div>
+              </div>
+            </div>
+  
+            <!-- Pioneros -->
+            <div class="item">
+              <div class="content">
+                <div class="left-content">
+                  <p>“Los pioneros son energía, creatividad y compromiso. He crecido junto a ellos en cada proyecto, campamento y servicio. Siempre dejan huella.”</p>
+                  <h4>Laura Pérez</h4>
+                  <span>Coordinadora de Pioneros</span>
+                </div>
+                <div class="image">
+                  <img src="/Public/images/Ramas/coordi5.jpg" alt="Coordinadora Pioneros">
+                </div>
+              </div>
+            </div>
+  
+            <!-- Animador Ruta -->
+            <div class="item">
+              <div class="content">
+                <div class="left-content">
+                  <p>“Ruta es más que una etapa, es un estilo de vida. Acompañar a los rovers a descubrir su lugar en el mundo es una misión con alma.”</p>
+                  <h4>Carlos Díaz</h4>
+                  <span>Animador Ruta</span>
+                </div>
+                <div class="image">
+                  <img src="/Public/images/Ramas/coordi1.jpg" alt="Animador Ruta">
+                </div>
+              </div>
+            </div>
+  
+            <!-- Jefe de Grupo -->
+            <div class="item">
+              <div class="content">
+                <div class="left-content">
+                  <p>“Ser Jefe de Grupo es confiar en un equipo comprometido. Cada rama tiene su magia, y juntos formamos una familia scout que nunca deja de crecer.”</p>
+                  <h4>Elena Gómez</h4>
+                  <span>Jefa de Grupo</span>
+                </div>
+                <div class="image">
+                  <img src="/Public/images/Ramas/coordi4.jpg" alt="Jefa de Grupo">
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>  
+      </div>
+    </div>
+  </section>
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- Primer bloque: Grupo Scout -->
+      <div class="col-md-6 mb-4">
+        <h5>Grupo Scout</h5>
+        <p class="mb-2">Siempre listos para servir.<br>Unidos por la aventura, guiados por valores.</p>
+        <p class="small mb-0">&copy; 2025. Todos los derechos reservados.</p>
+      </div>
+
+      <!-- Segundo bloque: Enlaces útiles -->
+      <div class="col-md-6 mb-4">
+        <h5>Enlaces útiles</h5>
+        <ul class="list-unstyled">
+          <li><a href="/inicio">Inicio</a></li>
+          <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+          <li><a href="/circulares">Circulares</a></li>
+          <li><a href="/ramas">Nuestras ramas</a></li>
+          <li><a href="/raices-scout">Nuestras raíces</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- ********* Scripts ********* -->
+  <!-- JQUERY-->
+  <script src="../../Vendor/Frontend/Jquery/jquery.min.js"></script>
+  <script src="../../Vendor/Frontend/Jquery/jquery.js"></script>
+  <!-- JQUERY UI-->
+  <script src="../../Vendor/Frontend/JqueryUI/jquery-ui.js"></script>
+  <!-- Iconify -->
+  <script src="../../Vendor/Frontend/Iconify/iconify.min.js"></script>
+  <!-- BOOTSTRAP -->
+  <script src="../../Vendor/Frontend/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ISOTOPE-->
+  <script src="../../Vendor/Frontend/Isotope/isotope.pkgd.js"></script>
+  <!-- OWL-->
+  <script src="../../Vendor/Frontend/OwlCarousel/owl.carousel.js"></script>
+  <!-- SWEET ALERT 2 -->
+  <script src="../../Vendor/Frontend/SweetAlert/sweetalert2.min.js"></script>
+  <!-- MOSTRAR POPUPS -->
+  <script src="../js/popup-min.js"></script>
+  <!-- JS PROPIO -->
+  <script src="../js/custom-min.js"></script>
+  <script src="../../Controllers/loadUserMenu-min.js"></script>
+  </body>
+</html>

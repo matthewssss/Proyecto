@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/Modules/Usuarios/View/">
+
+    <link rel="stylesheet" href="css/profileMenu.css">
+    <!-- TailWind -->
+    <link rel="stylesheet" href="../../../Vendor/Frontend/TailWind/output.css">  
+    <!---->
+    <link rel="stylesheet" href="../../../Vendor/Frontend/FontAwesome/css/fontawesome.css" />
+    <link rel="stylesheet" href="../../../Vendor/Frontend/SweetAlert/sweetalert2.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="absolute right-0 bg-[#12141d] p-10 w-80 h-screen space-y-3 text-base-content shadow-lg menuUsr">
+        <!-- LINEAS CON ICONO PERFIL -->
+        <div class="divider flex items-center justify-between">
+            <hr class="flex-grow border-t-2 border-gray-500 mx-2">
+            <span class="iconify profile text-gray-300 text-5xl" data-icon="ic:round-account-circle"></span>
+            <hr class="flex-grow border-t-2 border-gray-500 mx-2">
+        </div>
+    
+        <!-- Nombre de usuario y cerrar sesión -->
+        <div class="text-center pb-4">
+            <!-- NOMBRE USUARIO -->
+            <p id="nombreUsr" class="text-lg text-gray-200 font-semibold cursor-default"></p>
+            <button id="id_logout" class="bg-red-600 text-white px-4 py-2 rounded-md mt-2 hover:bg-red-700 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-500">
+                Cerrar sesión
+            </button>
+        </div>
+    
+        <!--    
+                *************
+            Lista de botones
+                *************
+        -->      
+        <ul class="space-y-2" id="id_listaBotones">
+            
+        </ul>
+        <div class="updateData">
+            <button id="backArrow" class="btn btn-secondary">
+                <span class="iconify profile text-gray-300 text-5xl"  data-icon="icon-park-solid:back"></span>
+            </button>
+            <div class="container my-5">
+                <h2 class="text-center mb-4 text-white">Editar Perfil</h2>
+        
+                <form id="editForm" method="POST" novalidate>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="correo" name="correo" required>
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Nueva Contraseña (opcional)</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                
+                    <div class="mb-3 text-center">
+                        <button id="changeData" type="submit" class="btn btn-primary">Actualizar Perfil</button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    
+    <script src="../../../Vendor/Frontend/Iconify/iconify.min.js"></script>
+    <script src="../../../Vendor/Frontend/Jquery/jquery.min.js"></script>
+    <script src="../../../Vendor/Frontend/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../Vendor/Frontend/jQueryValidation/jquery.validate.min.js"></script>
+    <script src="../Controllers/validateForms-min.js"></script>
+    <script src="../Controllers/profileMenu_Controller-min.js"></script>
+    <!-- SWEET ALERT 2 -->
+    <script src="../../../Vendor/Frontend/SweetAlert/sweetalert2.min.js"></script>
+</body>
+</html>

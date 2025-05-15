@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="templatemo" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Inicio</title>
+  <base href="/">
+  <link rel="icon" href="/Public/images/icon.png" type="image/png">
+
+  <meta property="og:image" content="https://gruposcout.online/Public/images/icon.png">
+  <meta property="og:title" content="Inicio">
+  <meta property="og:description" content="El punto de partida para explorar todo sobre nuestro grupo scout. Noticias destacadas, actividades recientes y acceso rápido a cada rincón de la web.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gruposcout.online/inicio">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <!--
+      LIBRERIAS
+    -->
+  <link rel="stylesheet" href="Vendor/Frontend/Bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="Vendor/Frontend/TailWind/output.css">
+  <link rel="stylesheet" href="Vendor/Frontend/FontAwesome/css/fontawesome.css">
+  <link rel="stylesheet" href="Vendor/Frontend/FontAwesome/css/all.css">
+  <link rel="stylesheet" href="Vendor/Frontend/OwlCarousel/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="Vendor/Frontend/Animate/animate.css" />
+  <link rel="stylesheet" href="Vendor/Frontend/Swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="Vendor/Frontend/SweetAlert/sweetalert2.min.css" />
+
+  <!-- 
+      CSS PROPIO
+    -->
+  <link rel="stylesheet" href="Public/css/templatemo-snapx-photography.css" />
+  <link rel="stylesheet" href="Public/css/styles.css">
+
+</head>
+
+<body>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="/inicio" class="logo">
+              <img src="/Public/images/florDeLis.png" alt="Flor de Lis" />
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="/inicio" class="active">Inicio</a></li>
+              <li class="has-sub">
+                <a href="javascript:void(0)">Nuestro grupo</a>
+                <ul class="sub-menu">
+                  <li><a href="/ramas">Nuestras ramas</a></li>
+                  <li>
+                    <a href="/raices-scout">Nuestras raices</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
+              <li><a href="/circulares">Circulares</a></li>
+            </ul>
+            <div class="border-button">
+              <a class="btn custom-tooltip-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <i class="fa fa-user"></i>
+              </a>
+            </div>
+            <a class="menu-trigger">
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+        id="offcanvasCloseBtn"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Cargar una página externa dentro del iframe -->
+      <iframe id="userIframe" src="" style="width:100%; height:100%; border:none;"></iframe>
+    </div>
+  </div>
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="header-text">
+            <h2>
+              Descubre un mundo de <em>Aventuras</em> y Grandes <em>Recuerdos</em>
+            </h2>
+            <p>
+              Nuestra plataforma scout reúne circulares, actividades, fotos y mucho más en un solo lugar. Una herramienta creada con cariño para mantenernos conectados, informados y siempre listos para la próxima expedición.
+            </p>
+            <div class="buttons">
+              <div class="big-border-button">
+                <a href="/circulares">Actividades</a>
+              </div>
+              <div class="big-border-button">
+                <a href="/sobre-nosotros">Conócenos</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!--FOTOS DESTACADAS-->
+  <section class="featured-items" id="featured-items">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-features owl-carousel" style="position: relative; z-index: 5">
+
+            <div class="item">
+              <div class="thumb">
+                <img src="/Public/images/Index/Carrusel/campamento.jpg" alt="" />
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Campamento de Verano</h4>
+                    <ul>
+                      <li><span>Ubicación:</span> La Gándara</li>
+                      <li><span>Año:</span> 2023</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="thumb">
+                <img src="/Public/images/Index/Carrusel/sierraGredos.jpg" alt="" />
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Salida de Navidad</h4>
+                    <ul>
+                      <li><span>Ubicación:</span> Sierra de Gredos</li>
+                      <li><span>Año:</span> 2023</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="thumb">
+                <img src="/Public/images/Index/Carrusel/semanaSanta.jpg" alt="" />
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Campamento de Semana Santa</h4>
+                    <ul>
+                      <li><span>Ubicación:</span> El Tiemblo</li>
+                      <li><span>Año:</span> 2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="thumb">
+                <img src="/Public/images/Index/Carrusel/segovia.jpg" alt="" />
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Salida Urbana</h4>
+                    <ul>
+                      <li><span>Ubicación:</span> Segovia alrededores</li>
+                      <li><span>Año:</span> 2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="thumb">
+                <img src="/Public/images/Index/Carrusel/campamento2.jpg" alt="" />
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Campamento Pionero</h4>
+                    <ul>
+                      <li><span>Ubicación:</span> Burgos</li>
+                      <li><span>Año:</span> 2022</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!--RAMAS-->
+  <section class="popular-categories">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h6>Nuestras Ramas</h6>
+            <h4>Conoce las <em>ramas</em> de nuestro <em>grupo scout</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="main-button">
+            <a href="/Ramas">Descubre todas las ramas</a>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="/Public/images/Unidades/lobatos.webp" alt="" />
+              </div>
+              <div class="right">
+                <h4>Lobatos</h4>
+                <span><em>9 a 11</em> años</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="Public/images/Index/popular-01.png" alt="" />
+              <span class="category">Haremos siempre lo mejor</span>
+              <span class="likes"><i class="fa fa-paw"></i></span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="/Public/images/Unidades/exploradores.webp" alt="" />
+              </div>
+              <div class="right">
+                <h4>Exploradores</h4>
+                <span><em>12 a 14</em> años</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="Public/images/Index/popular-02.png" alt="" />
+              <span class="category">Siempre alerta</span>
+              <span class="likes"><i class="fa fa-compass"></i></span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="/Public/images/Unidades/pioneros.webp" alt="" />
+              </div>
+              <div class="right">
+                <h4>Pioneros</h4>
+                <span><em>15 a 17</em> años</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="Public/images/Index/popular-03.png" alt="" />
+              <span class="category">Listos para servir</span>
+              <span class="likes"><i class="fa fa-hammer"></i></span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="/Public/images/Unidades/rutas.webp" alt="" />
+              </div>
+              <div class="right">
+                <h4>Rutas</h4>
+                <span><em>18 a 21</em> años</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="Public/images/Index/popular-04.png" alt="" />
+              <span class="category">A servir</span>
+              <span class="likes"><i class="fa fa-road"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--LEYES-->
+  <section class="closed-contests">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading text-center">
+            <h6 class="leyTitle">Leyes Scout</h6>
+            <h4>
+              <em>Conoce</em> Las Leyes Que Nos <em>Guían</em>
+            </h4>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-features owl-carousel" style="position: relative; z-index: 5">
+  
+            <!-- Ley 1 -->
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb leyes">
+                  <img src="/Public/images/Index/Leyes/ley1.jpg" alt="Ley Scout 1" />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Ley 2 -->
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb leyes">
+                  <img src="/Public/images/Index/Leyes/ley2.jpg" alt="Ley Scout 2" />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Ley 3 -->
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb leyes">
+                  <img src="/Public/images/Index/Leyes/ley3.jpg" alt="Ley Scout 3" />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Ley 4 -->
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb leyes">
+                  <img src="/Public/images/Index/Leyes/ley4.jpg" alt="Ley Scout 4" />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Ley 5 -->
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb leyes">
+                  <img src="/Public/images/Index/Leyes/ley5.jpg" alt="Ley Scout 5" />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Ley 6 -->
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb leyes">
+                  <img src="/Public/images/Index/Leyes/ley6.jpg" alt="Ley Scout 6" />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Ley 7 -->
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb leyes">
+                  <img src="/Public/images/Index/Leyes/ley7.jpg" alt="Ley Scout 7" />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Ley 8 -->
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb leyes">
+                  <img src="/Public/images/Index/Leyes/ley8.jpg" alt="Ley Scout 8" />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Ley 9 -->
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb leyes">
+                  <img src="/Public/images/Index/Leyes/ley9.jpg" alt="Ley Scout 9" />
+                </div>
+              </div>
+            </div>
+  
+            <!-- Ley 10 -->
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb leyes">
+                  <img src="/Public/images/Index/Leyes/ley10.jpg" alt="Ley Scout 10" />
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!--ACAMPADAS-->
+  <section class="pricing-plans">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading text-center">
+            <h6>Nuestras Acampadas</h6>
+            <h4>
+              Descubre nuestras <em>aventuras</em> en cada <em>época del año</em>
+            </h4>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <img src="Public/images/Index/compañerismo.avif" alt="" />
+            <h4>Acampada de Navidad</h4>
+            <ul class="first-plan">
+              <li>Convivencia scout invernal</li>
+              <li>Actividades en la naturaleza</li>
+              <li>Velada de invierno</li>
+              <li>Juego de ciudad</li>
+              <li>Ruta con mochila ligera</li>
+            </ul>
+            <span class="price">Diciembre</span>
+            <div class="border-button">
+              <a href="#">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <img src="Public/images/Index/brujula.avif" alt="" />
+            <h4>Acampada de Semana Santa</h4>
+            <ul class="second-plan">
+              <li>Días intensos de actividad</li>
+              <li>Exploración de nuevas zonas</li>
+              <li>Competencias por patrullas</li>
+              <li>Círculo de reflexión nocturno</li>
+              <li>Inmersión en valores scouts</li>
+            </ul>
+            <span class="price">Marzo / Abril</span>
+            <div class="border-button">
+              <a href="#">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <img src="Public/images/Index/niñosTienda.avif" alt="" />
+            <h4>Campamento de Verano</h4>
+            <ul class="third-plan">
+              <li>15 días de aventura scout</li>
+              <li>Construcciones, talleres y dinámicas</li>
+              <li>Marcha de unidad</li>
+              <li>Exploración de entorno natural</li>
+              <li>Momentos inolvidables</li>
+            </ul>
+            <span class="price">Julio</span>
+            <div class="border-button">
+              <a href="#">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- Primer bloque: Grupo Scout -->
+      <div class="col-md-6 mb-4">
+        <h5>Grupo Scout</h5>
+        <p class="mb-2">Siempre listos para servir.<br>Unidos por la aventura, guiados por valores.</p>
+        <p class="small mb-0">&copy; 2025. Todos los derechos reservados.</p>
+      </div>
+
+      <!-- Segundo bloque: Enlaces útiles -->
+      <div class="col-md-6 mb-4">
+        <h5>Enlaces útiles</h5>
+        <ul class="list-unstyled">
+          <li><a href="/inicio">Inicio</a></li>
+          <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+          <li><a href="/circulares">Circulares</a></li>
+          <li><a href="/ramas">Nuestras ramas</a></li>
+          <li><a href="/raices-scout">Nuestras raíces</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- ********* Scripts ********* -->
+  <!-- JQUERY-->
+  <script src="Vendor/Frontend/Jquery/jquery.min.js"></script>
+  <script src="Vendor/Frontend/Jquery/jquery.js"></script>
+  <!-- JQUERY UI-->
+  <script src="Vendor/Frontend/JqueryUI/jquery-ui.js"></script>
+  <!-- BOOTSTRAP -->
+  <script src="Vendor/Frontend/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ISOTOPE-->
+  <script src="Vendor/Frontend/Isotope/isotope.pkgd.js"></script>
+  <!-- OWL-->
+  <script src="Vendor/Frontend/OwlCarousel/owl.carousel.js"></script>
+  <!-- MOSTRAR POPUPS -->
+  <script src="Public/js/popup-min.js"></script>
+  <!-- SWEET ALERT 2 -->
+  <script src="Vendor/Frontend/SweetAlert/sweetalert2.min.js"></script>
+  <!-- JS PROPIO -->
+  <script src="Public/js/custom-min.js"></script>
+  <script src="Controllers/loadUserMenu-min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const abrir = localStorage.getItem("abrirOffcanvas");
+
+      if (abrir === "1") {
+        const elOffcanvas = new bootstrap.Offcanvas('#offcanvasExample');
+        elOffcanvas.show();
+        // Limpia para que no se repita en la siguiente carga
+        localStorage.removeItem("abrirOffcanvas");
+      }
+    });
+  </script>
+  <script src="/Modules/Global/Controllers/TokenController-min.js"></script>
+</body>
+
+</html>

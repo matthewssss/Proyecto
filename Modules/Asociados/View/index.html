@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos del Niño y Padre</title>
+  <link rel="icon" href="/Public/images/icon.png" type="image/png">
+
+  <meta property="og:image" content="https://gruposcout.online/Public/images/florDeLis.png">
+  <meta property="og:title" content="Informacion de asociados">
+  <meta property="og:description"
+    content="¿Quieres formar parte del grupo o colaborar con nosotros? Aquí puedes darte de alta como asociado o renovar tu compromiso de apoyo al escultismo.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gruposcout.online/inicio">
+
+  <base href="/Modules/Asociados/View/">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../../../Vendor/Frontend/SweetAlert/sweetalert2.min.css">
+  <link rel="stylesheet" href="../../../Vendor/Frontend/Bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../../Vendor/Frontend/FontAwesome/css/fontawesome.css">
+  <link rel="stylesheet" href="../../../Vendor/Frontend/FontAwesome/css/all.css">
+  <link rel="stylesheet" href="../../../Vendor/Frontend/Select2/css/select2.min.css" />
+
+  <!-- CSS PROPIO -->
+  <link rel="stylesheet" href="../../../Public/css/templatemo-snapx-photography.css" />
+  <link rel="stylesheet" href="../../../Public/css/styles.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-light">
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="/inicio" class="logo">
+              <img src="/Public/images/florDeLis.png" alt="Flor de Lis" />
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="/inicio" class="active">Inicio</a></li>
+              <li class="has-sub">
+                <a href="javascript:void(0)">Nuestro grupo</a>
+                <ul class="sub-menu">
+                  <li><a href="/ramas">Nuestras ramas</a></li>
+                  <li>
+                    <a href="/raices-scout">Nuestras raices</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
+              <li><a href="/circulares">Circulares</a></li>
+            </ul>
+            <div class="border-button">
+              <a class="btn custom-tooltip-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <i class="fa fa-user"></i>
+              </a>
+            </div>
+            <a class="menu-trigger">
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Cargar una página externa dentro del iframe -->
+      <iframe id="userIframe" style="width:100%; height:100%; border:none;"></iframe>
+    </div>
+  </div>
+
+  <div id="main" class="container mt-5">
+    <div class="ordenCards">
+      <div class="form">
+        <!-- From Uiverse.io by satyamchaudharydev -->
+        <button>
+          <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-labelledby="search">
+            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+              stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <input class="input" placeholder="Escibe aquí..." required="" type="text" id="searchAsociado">
+        <button class="reset" type="reset" id="resetSearchAsociado">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="filtrosOrden">
+        <select id="ordenar" class="form-control">
+          <option value="0">Ordenar por:</option>
+          <option value="1">Edad: De mayor a menor</option>
+          <option value="2">Edad: De menor a mayor</option>
+          <option value="3">Nombre: A-Z</option>
+          <option value="4">Nombre: Z-A</option>
+          <option value="5">Rama: Lobatos</option>
+          <option value="6">Rama: Exploradores</option>
+          <option value="7">Rama: Pioneros</option>
+          <option value="8">Rama: Rutas</option>
+        </select>
+        <!-- From Uiverse.io by javierBarroso -->
+        <button class="button" id="closeFilters">
+          <span class="X"></span>
+          <span class="Y"></span>
+          <div class="close">Quitar filtros</div>
+        </button>
+
+      </div>
+    </div>
+    <!-- Título -->
+    <div class="d-flex flex-wrap justify-content-center align-items-center mb-4" id="create">
+      <span>Ver:</span>
+      <select id="registros" class="form-control">
+        <option value="1">Unidad</option>
+        <option value="2">Mis registros</option>
+        <option value="3">Todos los registros</option>
+      </select>
+      <h1 class="text-center flex-grow-1">Datos Registrados</h1>
+      <!-- From Uiverse.io by NorthFishHasNa -->
+      <button id="createAsociado" type="button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">
+        <span>Registrar asociado</span>
+      </button>
+    </div>
+
+    <!-- MODAL PARA REGISTRAR ASOCIADOS -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+      data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <div class="modal-dialog custom-modal-size"> <!-- Usamos una clase personalizada para el tamaño -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Crear asociado</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <iframe src="/nuevo-asociado" frameborder="0" class="iframe-custom"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sinResultados" style="display: none; text-align: center; margin-top: 20px;">
+      <p>No hay resultados que coincidan con el filtro seleccionado.</p>
+    </div>
+
+    <!--Datos de cada asociado aqui -->
+    <div class="datosMultiple" id="cardsData"></div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- Primer bloque: Grupo Scout -->
+        <div class="col-md-6 mb-4">
+          <h5>Grupo Scout</h5>
+          <p class="mb-2">Siempre listos para servir.<br>Unidos por la aventura, guiados por valores.</p>
+          <p class="small mb-0">&copy; 2025. Todos los derechos reservados.</p>
+        </div>
+
+        <!-- Segundo bloque: Enlaces útiles -->
+        <div class="col-md-6 mb-4">
+          <h5>Enlaces útiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="/inicio">Inicio</a></li>
+            <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="/circulares">Circulares</a></li>
+            <li><a href="/ramas">Nuestras ramas</a></li>
+            <li><a href="/raices-scout">Nuestras raíces</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ********* Scripts ********* -->
+  <!-- ICONOS -->
+  <script src="../../../Vendor/Frontend/Iconify/iconify.min.js"></script>
+  <!-- JQUERY-->
+  <script src="../../../Vendor/Frontend/Jquery/jquery.min.js"></script>
+  <script src="../../../Vendor/Frontend/Jquery/jquery.js"></script>
+  <!-- JQUERY UI-->
+  <script src="../../../Vendor/Frontend/JqueryUI/jquery-ui.js"></script>
+  <!-- SWEET ALERT 2 -->
+  <script src="../../../Vendor/Frontend/SweetAlert/sweetalert2.min.js"></script>
+  <!-- BOOTSTRAP -->
+  <script src="../../../Vendor/Frontend/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ISOTOPE-->
+  <script src="../../../Vendor/Frontend/Isotope/isotope.pkgd.js"></script>
+  <!-- OWL-->
+  <script src="../../../Vendor/Frontend/OwlCarousel/owl.carousel.js"></script>
+  <!-- MOSTRAR POPUPS -->
+  <script src="../../../Public/js/popup-min.js"></script>
+  <!-- SELECT 2 -->
+  <script src="../../../Vendor/Frontend/Select2/js/select2.min.js"></script>
+  <!-- JS PROPIO -->
+  <script src="../../../Controllers/loadUserMenu-min.js"></script>
+  <script src="../../../Public/js/custom-min.js"></script>
+  <script src="../Controllers/mainController-min.js"></script>
+  <script src="../Controllers/form-utils-min.js"></script>
+</body>
+
+</html>

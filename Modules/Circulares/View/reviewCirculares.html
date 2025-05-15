@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+TODO SWIPER MOVIL /// SELECT2
+-->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="author" content="templatemo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Revision de circulares</title>
+    <link rel="icon" href="/Public/images/icon.png" type="image/png">
+    <base href="/Modules/Circulares/View/">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+    <!-- LIBRERIAS -->
+    <link rel="stylesheet" href="../../../Vendor/Frontend/SweetAlert/sweetalert2.min.css">
+    <link rel="stylesheet" href="../../../Vendor/Frontend/Bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../../Vendor/Frontend/FontAwesome/css/fontawesome.css">
+    <link rel="stylesheet" href="../../../Vendor/Frontend/FontAwesome/css/all.css">
+    <link rel="stylesheet" href="../../../Vendor/Frontend/Select2/css/select2.min.css" />
+    <link rel="stylesheet" href="../../../Vendor/Frontend/DataTables/css/dataTables.bootstrap5.min.css">
+
+
+    <!-- CSS PROPIO -->
+    <link rel="stylesheet" href="../../../Public/css/templatemo-snapx-photography.css" />
+    <link rel="stylesheet" href="../../../Public/css/styles.css" />
+    <link rel="stylesheet" href="css/create.css">
+    <link rel="stylesheet" href="css/review.css">
+</head>
+
+<body>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="/inicio" class="logo">
+              <img src="/Public/images/florDeLis.png" alt="Flor de Lis" />
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="/inicio" class="active">Inicio</a></li>
+              <li class="has-sub">
+                <a href="javascript:void(0)">Nuestro grupo</a>
+                <ul class="sub-menu">
+                  <li><a href="/ramas">Nuestras ramas</a></li>
+                  <li>
+                    <a href="/raices-scout">Nuestras raices</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
+              <li><a href="/circulares">Circulares</a></li>
+            </ul>
+            <div class="border-button">
+              <a class="btn custom-tooltip-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <i class="fa fa-user"></i>
+              </a>
+            </div>
+            <a class="menu-trigger">
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <!-- ***** Header Area End ***** -->
+
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Cargar una página externa dentro del iframe -->
+            <iframe id="userIframe" style="width:100%; height:100%; border:none;"></iframe>
+        </div>
+    </div>
+
+    <div class="container my-5 contenedorPrincipal">
+        <h1 class="mb-4 text-center">Gestión de circulares</h1>
+    
+        <!-- Botón para crear circular -->
+        <div class="mb-3 text-center">
+            <button class="btn btn-success btnPrincipal btnCreate" id="btn-crear-circular">Crear Circular</button>
+        </div>
+        <!-- Tabs -->
+        <ul class="nav nav-tabs" id="enviosTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="no-enviados-tab" data-bs-toggle="tab" data-bs-target="#no-enviados"
+                    type="button" role="tab" aria-controls="no-enviados" aria-selected="true">
+                    No Enviados
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="enviados-tab" data-bs-toggle="tab" data-bs-target="#enviados" type="button"
+                    role="tab" aria-controls="enviados" aria-selected="false">
+                    Enviados
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="eliminados-tab" data-bs-toggle="tab" data-bs-target="#eliminados"
+                    type="button" role="tab" aria-controls="eliminados" aria-selected="false">
+                    Eliminados
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tabs Content -->
+        <div class="tab-content mt-3" id="enviosTabsContent">
+            <!-- No Enviados -->
+            <div class="tab-pane fade show active" id="no-enviados" role="tabpanel" aria-labelledby="no-enviados-tab">
+                <div class="table-responsive">
+                    <table id="tablaNoEnviados" class="table table-striped table-bordered" style="width:100%">
+                        <thead class="table-custom">
+                            <tr>
+                                <th>Título</th>
+                                <th>Fechas</th>
+                                <th>Pernoctas</th>
+                                <th>Rama</th>
+                                <th>Creado por</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Se carga dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Enviados -->
+            <div class="tab-pane fade" id="enviados" role="tabpanel" aria-labelledby="enviados-tab">
+                <div class="table-responsive">
+                    <table id="tablaEnviados" class="table table-striped table-bordered" style="width:100%">
+                        <thead class="table-custom">
+                            <tr>
+                                <th>Título</th>
+                                <th>Fechas</th>
+                                <th>Pernoctas</th>
+                                <th>Rama</th>
+                                <th>Creado por</th>
+                                <th>Fecha subida</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Se carga dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Eliminados -->
+            <div class="tab-pane fade" id="eliminados" role="tabpanel" aria-labelledby="eliminados-tab">
+                <div class="table-responsive">
+                    <table id="tablaEliminados" class="table table-striped table-bordered" style="width:100%">
+                        <thead class="table-custom">
+                            <tr>
+                                <th>Título</th>
+                                <th>Fechas</th>
+                                <th>Pernoctas</th>
+                                <th>Rama</th>
+                                <th>Creado por</th>
+                                <th>Fecha subida</th>
+                                <th>Eliminado por</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Se carga dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- Primer bloque: Grupo Scout -->
+      <div class="col-md-6 mb-4">
+        <h5>Grupo Scout</h5>
+        <p class="mb-2">Siempre listos para servir.<br>Unidos por la aventura, guiados por valores.</p>
+        <p class="small mb-0">&copy; 2025. Todos los derechos reservados.</p>
+      </div>
+
+      <!-- Segundo bloque: Enlaces útiles -->
+      <div class="col-md-6 mb-4">
+        <h5>Enlaces útiles</h5>
+        <ul class="list-unstyled">
+          <li><a href="/inicio">Inicio</a></li>
+          <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+          <li><a href="/circulares">Circulares</a></li>
+          <li><a href="/ramas">Nuestras ramas</a></li>
+          <li><a href="/raices-scout">Nuestras raíces</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- ********* Scripts ********* -->
+    <!-- ICONOS -->
+    <script src="../../../Vendor/Frontend/Iconify/iconify.min.js"></script>
+    <!-- JQUERY-->
+    <script src="../../../Vendor/Frontend/Jquery/jquery.js"></script>
+    <!-- JQUERY UI-->
+    <script src="../../../Vendor/Frontend/JqueryUI/jquery-ui.js"></script>
+    <!-- SWEET ALERT 2 -->
+    <script src="../../../Vendor/Frontend/SweetAlert/sweetalert2.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <script src="../../../Vendor/Frontend/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ISOTOPE-->
+    <script src="../../../Vendor/Frontend/Isotope/isotope.pkgd.js"></script>
+    <!-- OWL-->
+    <script src="../../../Vendor/Frontend/OwlCarousel/owl.carousel.js"></script>
+    <!-- MOSTRAR POPUPS -->
+    <script src="../../../Public/js/popup-min.js"></script>
+    <!-- SELECT 2 -->
+    <script src="../../../Vendor/Frontend/Select2/js/select2.min.js"></script>
+    <!--  DATA TABLES  -->
+    <script src="../../../Vendor/Frontend/DataTables/js/dataTables.js"></script>
+    <script src="../../../Vendor/Frontend/DataTables/js-bs5/dataTables.bootstrap5.min.js"></script>
+    <!-- FULLCALENDAR -->
+    <script src="../../../Vendor/Frontend/FullCalendar/index.global.js"></script>
+    <script src="../../../Vendor/Frontend/FullCalendar/core/locales-all.global.js"></script>
+    <!-- JS PROPIO -->
+    <script src="../../../Controllers/loadUserMenu-min.js"></script>
+    <script src="../../../Public/js/custom-min.js"></script>
+    <script src="../Controllers/modalCircular-min.js"></script>
+    <script src="../Controllers/reviewController-min.js"></script>
+</body>
+
+</html>

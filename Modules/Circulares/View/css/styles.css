@@ -1,0 +1,374 @@
+.colorBar {
+    height: 10px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+.Lobatos {
+    background: linear-gradient(to right, #fdd835, #fbc02d);
+    /* amarillo */
+}
+
+.Exploradores {
+    background: linear-gradient(to right, #42a5f5, #1e88e5);
+    /* azul */
+}
+
+.Pioneros {
+    background: linear-gradient(to bottom, #ec4040, #fc0000);
+    /* rosa-rojo */
+}
+
+
+.is-valid {
+    border-color: green !important;
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.is-valid+.valid-feedback {
+    display: block;
+    color: green;
+}
+
+
+/* ***********************************************************/
+/* Estilo para el icono (incompatibilidad con bootstrap...) */
+/* ***********************************************************/
+
+.swal2-icon {
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.swal2-icon-content {
+    margin: 0 auto;
+    font-size: 3rem;
+}
+
+/* ---------- Layout general ---------- */
+section {
+    width: 65%;
+    margin: 8rem auto;
+}
+
+@media (max-width: 500px) {
+    section {
+        width: 90%;
+        margin: 0rem auto;
+    }
+
+    section .btn-group {
+        width: 100%;
+    }
+}
+
+section h1 {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+section .btn-group {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.user-info,
+section {
+    min-width: 350px !important;
+}
+
+
+/* ---------- Texto y espaciado ---------- */
+p,
+strong,
+span {
+    color: black !important;
+}
+
+#recentData {
+    height: 184px;
+    text-align: left;
+}
+
+#recentData span {
+    padding: 10px;
+}
+
+/* ---------- Botones ---------- */
+.btn-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-group .btn {
+    flex: 1;
+    max-width: 45%;
+    white-space: nowrap;
+    border-radius: 30px !important;
+    transition: all 0.2s ease;
+}
+
+.btn-group .btn:hover {
+    background-color: #004f69;
+    transform: scale(1.2);
+}
+
+/* ---------- Card base ---------- */
+
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Cards destacadas (NOVEDADES) ---------- */
+.card-circular {
+    border: 3px solid transparent;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    padding: 2rem;
+    position: relative;
+}
+
+.card-circular:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+    border-color: #007bff;
+}
+
+/* Badge visual de novedad (si se usa ::before, puedes quitar si usas iconify) */
+.card-circular::before {
+    content: none;
+    /* ya no lo usamos, lo sustituye iconify */
+}
+
+/* Icono NOVEDAD (iconify) */
+.novedad-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #e207ff;
+    font-size: 2.8rem;
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* ---------- Colores por rama ---------- */
+.card-circular.lobatos {
+    border-left: 5px solid #ffd700;
+}
+
+.card-circular.exploradores {
+    border-left: 5px solid #0099ff;
+}
+
+.card-circular.pioneros {
+    border-left: 5px solid #ff3e3e;
+}
+
+.card-circular.lobatos:hover {
+    border-color: #ffd700;
+}
+
+.card-circular.exploradores:hover {
+    border-color: #0099ff;
+}
+
+.card-circular.pioneros:hover {
+    border-color: #fc0000;
+}
+
+/* ---------- Otros ---------- */
+#circulares>div {
+    margin-bottom: 2rem;
+}
+
+
+.circular {
+    margin: 10px !important;
+    width: 100%;
+    max-width: 240px !important;
+}
+
+@media (max-width: 500px) {
+    .circular {
+        margin-left: 5rem !important;
+    }
+}
+
+
+
+.fechainicio {
+    top: -8px !important;
+    left: 56px !important;
+    right: auto !important;
+    font-size: 17px;
+    background-color: #14af27 !important;
+}
+
+.icono {
+    font-size: 2.5rem;
+}
+
+/* ICONOS DE LAS CARDS FOOTER */
+
+.card-footer .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.5rem; /* Tamaño del icono */
+    border-radius: 50px;
+}
+
+.card-footer .btn span.iconify {
+    font-size: 2rem; /* Tamaño más grande del icono */
+}
+
+.card-footer .btn:hover {
+    background-color: #f8f9fa;
+}
+
+.card-footer .btn:focus {
+    outline: none;
+}
+
+.card-footer .btn.w-33 {
+    width: 33%; /* 33% de la fila */
+}
+
+.btnPrincipal {
+    transition: 0.5s all;
+}
+
+.card-footer a:hover, .btnPrincipal:hover {
+    background-color: blue !important;
+    border-radius: 50px;
+
+}
+
+
+
+/* Hover suave en los eventos de FullCalendar */
+.fc-daygrid-event-harness .fc-event {
+    background-color: #367de7 !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fc-daygrid-event-harness .fc-event:hover {
+    background-color: #00327c !important;
+    /* Color azul Bootstrap */
+    color: #ffffff !important;
+    border: none;
+    border-radius: 5px;
+}
+
+#calendario {
+    min-height: 600px;
+}
+
+
+
+  /* ********************************* */
+/* BUSCADOR ANIMADO */
+/* ********************************* */
+  /* From Uiverse.io by satyamchaudharydev */ 
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+  /* styling of whole input container */
+  .form {
+    --timing: 0.3s;
+    --width-of-input: 200px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #2f2ee9;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+  }
+  /* styling of Input */
+  .input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+  }
+  /* styling of animated border */
+  .form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+  }
+  /* Hover on Input */
+  .form:focus-within {
+    border-radius: var(--after-border-radius);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  /* here is code of animated border */
+  .form:focus-within:before {
+    transform: scale(1);
+  }
+  /* styling of close button */
+  /* == you can click the close button to remove text == */
+  .reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* close button shown when typing */
+  input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* sizing svg icons */
+  .form svg {
+    width: 17px;
+    margin-top: 3px;
+  }
+
+
+#asideFiltros {
+    z-index: 90;
+  }
+
+
+#circulares {
+    overflow: scroll;
+    height: 1000px !important;
+}

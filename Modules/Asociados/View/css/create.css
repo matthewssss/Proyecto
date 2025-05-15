@@ -1,0 +1,373 @@
+body {
+    overflow-x: hidden;
+}
+
+#backgroundColor {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: #12141d;
+    z-index: -1;
+}
+
+/* Estilos base del formulario */
+#formMain {
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+    width: 100%;
+    padding: 20px;
+}
+
+#formMain h3 {
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    margin: 0 0 40px;
+}
+
+/* Estilos de los campos de formulario */
+#formMain .form-control {
+    font-size: 17px;
+    background: none;
+    background-image: none;
+    border: 1px solid #01939c;
+    color: #fff;
+    border-radius: 6px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#formMain .form-control:focus {
+    background: none;
+    color: #fff;
+    border-color: #025c61;
+    box-shadow: 0 0 5px rgba(1, 147, 156, 0.5);
+}
+
+#formMain .control-label {
+    color: white;
+    margin-bottom: 10px;
+    width: 34%;
+}
+
+/* Estilos generales para los botones */
+#formMain .btn {
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background: #01939c;
+    color: #fff;
+    transition: all 0.3s ease;
+    margin: 10px 5px;
+    min-width: 120px;
+    border-radius: 25px;
+}
+
+/* Estilo para los botones 'next' y 'prev' */
+#formMain .nextBtn,
+#formMain .prevBtn {
+    margin: 10px;
+    padding: 12px 30px;
+}
+
+/* Estilo para los botones circulares en los pasos */
+#formMain .stepwizard-step a.btn-circle {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background: #01939c;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Estilo para los botones circulares deshabilitados */
+#formMain .stepwizard-step a.btn-circle.disabled {
+    background: #2a2d3a;
+    color: #01939c;
+}
+
+/* Estilo para los botones deshabilitados */
+#formMain .btn-default {
+    background: #2a2d3a;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+/* Efecto hover para los botones */
+#formMain .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#formMain .btn:focus,
+#formMain .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del wizard */
+#formMain .stepwizard {
+    display: table;
+    width: 50%;
+    position: relative;
+    margin: 0 auto 10px;
+}
+
+@media (max-width: 420px) {
+    #formMain .stepwizard {
+        transform: scale(0.85) translateX(-53px);
+    }
+}
+
+#formMain .stepwizard-row {
+    display: table-row;
+}
+
+/* Modify the line position and opacity */
+#formMain .stepwizard-row:before {
+    top: 82px;
+    /* Adjusted from 20px to better center with circles */
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 3px;
+    /* Increased from 2px to make it more visible */
+    background-color: #01939c;
+    opacity: 0.5;
+    /* Increased from 0.3 to make it more visible */
+    z-index: 0;
+}
+
+/* Modify the circle buttons opacity */
+#formMain .stepwizard-step a.btn-circle {
+    opacity: 0.85;
+    /* Added opacity to make circles slightly more opaque */
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background: #01939c;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Modify disabled circle buttons */
+#formMain .stepwizard-step a.btn-circle.disabled,
+#formMain .btn-default {
+    background: #2a2d3a;
+    opacity: 0.75;
+    /* Increased from 0.7 to make it more visible */
+}
+
+#formMain .stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+
+#formMain .stepwizard-step p {
+    color: #01939c;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    margin-top: 10px;
+    transition: 0.6s ease-in-out;
+}
+
+#formMain .stepwizard-step p.active-step {
+    opacity: 1;
+    font-weight: 900;
+    text-decoration: underline;
+    transition: 0.6s ease-in-out;
+}
+
+#formMain .stepwizard-step p:not(p.active-step) {
+    transform: scale(0.8);
+    filter: opacity(0.5);
+}
+
+
+/* Estados especiales */
+#formMain input[readonly] {
+    background: rgba(1, 147, 156, 0.1);
+    cursor: not-allowed;
+}
+
+#formMain .has-error .form-control {
+    border-color: #dc3545;
+}
+
+
+/* Modify the circle buttons */
+#formMain .stepwizard-step a.btn-circle {
+    width: 5px;
+    /* Reduced from 45px */
+    height: 65px;
+    /* Reduced from 45px */
+    text-align: center;
+    padding: 6px;
+    /* Reduced from 10px */
+    font-size: 16px;
+    /* Reduced from 18px */
+    line-height: 1.428571429;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background: #01939c;
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    opacity: 0.85;
+}
+
+/* Adjust the text below buttons */
+#formMain .stepwizard-step p {
+    margin-top: 8px;
+    /* Reduced from 10px */
+    font-size: 14px;
+    /* Added to make text smaller */
+}
+
+#formMain .stepwizard-step a.btn-primary {
+    border: 2px solid #01939c;
+}
+
+#formMain .stepwizard-step a:not(a.btn-primary) {
+    transform: scale(0.8);
+
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+.select2-container {
+    width: 100% !important;
+    background-color: #12141d !important;
+}
+
+#estado_civil {
+    background-color: #12141d !important;
+}
+
+
+/* ************ */
+/* tooll tip */
+
+#tooltipSimulado {
+    display: none;
+    position: absolute;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb;
+    max-width: 300px;
+    z-index: 1000;
+    top: 43rem;
+    left: 27rem;
+}
+
+
+/* ========================
+   ESTILOS BASE SELECT2
+======================== */
+
+/* Estilo del SELECT visible (contenedor select2) */
+.select2-container--default .select2-selection--single {
+    background: none;
+    background-image: none;
+    border: 1px solid #01939c;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    height: 40px;
+    padding: 6px 12px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* Texto seleccionado visible */
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #fff;
+    line-height: 1.5;
+}
+
+/* Icono de flecha */
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #01939c transparent transparent transparent;
+}
+
+
+/* ========================
+   ESTILOS DEL DROPDOWN
+======================== */
+
+/* Contenedor del dropdown */
+.select2-container--default .custom-dark-dropdown {
+    background-color: #1c1f2a;
+    border: 1px solid #01939c;
+    color: #fff;
+}
+
+/* Campo de búsqueda en el dropdown */
+.select2-container--default .custom-dark-dropdown .select2-search--dropdown .select2-search__field {
+    background-color: #1c1f2a;
+    color: #fff;
+    border: 1px solid #01939c;
+    border-radius: 4px;
+    padding: 6px 10px;
+    font-size: 16px;
+}
+
+/* Placeholder del buscador */
+.select2-container--default .custom-dark-dropdown .select2-search--dropdown .select2-search__field::placeholder {
+    color: #999;
+}
+
+/* Opciones del dropdown */
+.select2-container--default .custom-dark-dropdown .select2-results__option {
+    color: #fff;
+    padding: 8px 12px;
+}
+
+/* Hover o resaltado en opciones */
+.select2-container--default .custom-dark-dropdown .select2-results__option--highlighted {
+    background-color: #01939c;
+    color: #12141d;
+}
+
+
+/* ========================
+   ESTILOS OPCIONALES (MODULARIDAD)
+======================== */
+
+/* Si usas containerCssClass: 'custom-dark-container', puedes aplicar estilos extra */
+.select2-container--default .custom-dark-container .select2-selection--single {
+    background-color: transparent;
+}
+
+.select2-container--default .custom-dark-container .select2-selection__rendered {
+    color: #fff !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    color: white;
+}

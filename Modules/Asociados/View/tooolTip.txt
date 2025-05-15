@@ -1,0 +1,88 @@
+¡Entendido! Si todos los errores tienen la clase `.error`, podemos recoger todos esos elementos con esa clase y construir una lista HTML con ellos.
+
+Voy a proporcionarte un ejemplo de cómo puedes hacerlo en JavaScript usando jQuery. Lo que haremos es lo siguiente:
+
+1. Recoger todos los elementos con la clase `.error`.
+2. Construir un `ul` con los mensajes de error de esos elementos.
+3. Añadir esa lista al título del botón o donde lo necesites.
+
+### Ejemplo de código:
+
+```javascript
+$(document).ready(function() {
+    // Función para recoger todos los errores y crear una lista
+    function generateErrorList() {
+        let erroresLista = "<ul>"; // Comienza una lista ordenada
+        let erroresActuales = false; // Bandera para verificar si hay errores
+        
+        // Recoger todos los elementos con la clase .error
+        $(".error").each(function() {
+            erroresLista += "<li>" + $(this).text() + "</li>"; // Añadir el texto de cada error a la lista
+            erroresActuales = true; // Si hay al menos un error, cambia la bandera a true
+        });
+        
+        // Si hay errores, cerrar la lista
+        if (erroresActuales) {
+            erroresLista += "</ul>";
+        } else {
+            erroresLista = "No se encontraron errores."; // Si no hay errores, mostrar un mensaje por defecto
+        }
+        
+        return erroresLista; // Devolver la lista de errores
+    }
+
+    // Al hacer clic en el botón de guardar, poner la lista de errores en el tooltip
+    $("#guardarBtn").click(function(event) {
+        event.preventDefault(); // Prevenir el comportamiento por defecto del botón
+
+        // Generar la lista de errores
+        let erroresLista = generateErrorList();
+        
+        // Colocar la lista de errores en el tooltip del botón
+        $("#guardarBtn").attr("title", erroresLista);
+
+        // Inicializar o actualizar el tooltip
+        let tooltip = bootstrap.Tooltip.getInstance($("#guardarBtn")[0]); // Obtener instancia actual del tooltip
+        if (tooltip) {
+            tooltip.dispose(); // Eliminar el tooltip anterior
+        }
+        new bootstrap.Tooltip($("#guardarBtn")[0]); // Crear nuevo tooltip con la lista de errores
+        
+        // Mostrar los errores en la consola para depuración (opcional)
+        console.log(erroresLista);
+    });
+});
+```
+
+### Explicación del código:
+
+1. **`generateErrorList`**:
+   - Esta función recorre todos los elementos con la clase `.error` y va recogiendo su texto.
+   - Genera una lista HTML (`<ul>`), añadiendo cada mensaje de error como un `<li>`.
+   - Si no encuentra errores (si no hay elementos con `.error`), mostrará el mensaje "No se encontraron errores".
+
+2. **Al hacer clic en el botón `#guardarBtn`**:
+   - Prevenimos el comportamiento predeterminado del formulario para evitar un envío no deseado.
+   - Generamos la lista de errores usando la función `generateErrorList`.
+   - Establecemos el contenido de la lista en el atributo `title` del botón `#guardarBtn`.
+   - Actualizamos el tooltip para mostrar la nueva lista de errores.
+
+### Consideraciones:
+
+- El `tooltip` se actualizará automáticamente con la lista de errores, mostrando los mensajes debajo del botón.
+- Si deseas agregar más personalización al estilo del tooltip o del listado, puedes hacerlo utilizando clases CSS.
+- Este código solo muestra los errores que están en los elementos con la clase `.error`, que es cómo normalmente jQuery Validate genera los mensajes de error.
+
+### Estilos adicionales (opcional):
+Si deseas personalizar aún más el estilo del tooltip y que los errores se vean más atractivos, puedes agregar algo de estilo CSS:
+
+```css
+.tooltip-inner {
+    max-width: 300px;  /* Puedes ajustar el tamaño máximo del tooltip */
+    font-size: 14px;    /* Puedes ajustar el tamaño de fuente */
+    background-color: #f8d7da; /* Color de fondo rojo claro para los errores */
+    color: #721c24;     /* Color del texto */
+}
+```
+
+Este código debería ser suficiente para hacer lo que estás pidiendo. Si necesitas algún ajuste o tienes alguna otra duda, ¡dime! 😊

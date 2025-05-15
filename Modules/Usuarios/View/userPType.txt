@@ -1,0 +1,36 @@
+        <ul class="w-full space-y-4">
+            <li class="flex cursor-pointer items-center text-xl px-6 py-4 rounded-lg border border-gray-600 bg-gray-800 text-white hover:bg-gray-700 hover:text-gray-200 transition-all duration-300 ease-in-out">
+                <span class="iconify text-gray-300 me-3 text-4xl" data-icon="ic:baseline-person"></span>
+                Profile
+            </li>
+            <li class="flex cursor-pointer items-center text-xl px-6 py-4 rounded-lg border border-gray-600 bg-gray-800 text-white hover:bg-gray-700 hover:text-gray-200 transition-all duration-300 ease-in-out">
+                <span class="iconify text-gray-300 me-3 text-4xl" data-icon="ic:baseline-supervisor-account"></span>
+                Asociados
+            </li>
+        </ul>
+
+
+
+                <!-- Lista de opciones -->
+        <ul class="space-y-2">
+            <li class="flex cursor-pointer items-center text-xl px-4 py-3 rounded-lg border border-gray-600 bg-gray-800 text-white hover:bg-gray-700 hover:text-gray-200 transition-all duration-300 ease-in-out">
+                <span class="iconify text-gray-300 me-3 text-3xl" data-icon="ic:baseline-person"></span>
+                Profile
+            </li>
+            <li class="flex cursor-pointer items-center text-xl px-4 py-3 rounded-lg border border-gray-600 bg-gray-800 text-white hover:bg-gray-700 hover:text-gray-200 transition-all duration-300 ease-in-out">
+                <span class="iconify text-gray-300 me-3 text-3xl" data-icon="ic:baseline-supervisor-account"></span>
+                Asociados
+            </li>
+            <li class="flex cursor-pointer items-center text-xl px-4 py-3 rounded-lg border border-gray-600 bg-gray-800 text-white hover:bg-gray-700 hover:text-gray-200 transition-all duration-300 ease-in-out">
+                <span class="iconify text-gray-300 me-3 text-3xl" data-icon="ic:baseline-groups"></span>
+                Kraalete
+            </li>
+            <li class="flex cursor-pointer items-center text-xl px-4 py-3 rounded-lg border border-gray-600 bg-gray-800 text-white hover:bg-gray-700 hover:text-gray-200 transition-all duration-300 ease-in-out">
+                <span class="iconify text-gray-300 me-3 text-3xl" data-icon="ic:baseline-file-copy"></span>
+                Circulares
+            </li>
+            <li class="flex cursor-pointer items-center text-xl px-6 py-3 rounded-lg border border-gray-600 bg-gray-800 text-white hover:bg-gray-700 hover:text-gray-200 transition-all duration-300 ease-in-out">
+                <span class="iconify text-gray-300 me-3 text-3xl" data-icon="ic:round-person-search"></span>
+                Usuarios
+            </li>
+        </ul>

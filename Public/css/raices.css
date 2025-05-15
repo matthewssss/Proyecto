@@ -1,0 +1,20 @@
+p {
+    color:rgb(26, 25, 25) !important
+}
+
+.card-animate {
+    border: 2px solid gray;
+    border-radius: 15px;
+    box-shadow: 2px 7px 13px;
+    width: 30%;
+    transition: 0.5s;
+    margin: 20px;
+}
+
+.card-animate:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 2rem;
+}

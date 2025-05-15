@@ -1,0 +1,68 @@
+.contenedorPrincipal {
+    margin-top: 8rem !important;
+}
+
+.btnPrincipal:hover  {
+    background-color: blue !important;
+    border-radius: 50px;
+}
+
+.btnCreate {
+    border: none;
+}
+
+.btnCreate:hover {
+    transform: scale(1.2);
+}
+
+.table-custom {
+    --bs-table-color: #fff;
+    --bs-table-bg: #800080d9;  /* Púrpura */
+    --bs-table-border-color: #4d5154;
+    --bs-table-striped-bg: #2c3034;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #373b3e;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #323539;
+    --bs-table-hover-color: #fff;
+    color: var(--bs-table-color);
+    border-color: var(--bs-table-border-color);
+}
+
+
+/* Hover sobre los botones del dropdown */
+.dropdown-item:hover {
+    background-color: #f8f9fa; /* Fondo suave */
+    color: #007bff; /* Color del texto cuando se pasa el ratón */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Hover sobre el icono */
+.dropdown-item span.iconify {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-item:hover span.iconify {
+    transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el ratón */
+}
+
+/* Aseguramos que el dropdown no se corte */
+.table-responsive {
+    overflow-x: auto !important; /* Permitir que los dropdowns sean visibles fuera de la tabla */
+}
+
+/* Aseguramos que el dropdown tenga un z-index alto */
+.dropdown-menu {
+    z-index: 1050; /* Asegura que esté encima de otros elementos */
+}
+
+
+/* ***********************************************************/
+/* Estilo para el icono (incompatibilidad con bootstrap...) */
+/* ***********************************************************/
+
+
+.mi-popup-central {
+    margin: 0 auto;
+    font-size: 30px;
+}

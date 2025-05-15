@@ -1,0 +1,38 @@
+          <div class="card-body">
+              <!-- Front side: Datos del Niño -->
+              <div class="front">
+                  <h2 class="card-title">Datos del Niño</h2>
+                  <div class="mb-3"><strong>Nombre:</strong> Juan</div>
+                  <div class="mb-3"><strong>Apellidos:</strong> Pérez López</div>
+                  <div class="mb-3"><strong>DNI:</strong> 12345678A</div>
+                  <div class="mb-3"><strong>Fecha de Nacimiento:</strong> 01/01/2010</div>
+                  <div class="mb-3"><strong>Edad:</strong> 14 años</div>
+                  <div class="mb-3"><strong>Rama:</strong> A (Esencial)</div>
+
+                  <!-- Botones -->
+                  <div class="botones">
+                      <button class="btn btn-link detallesBtn">Ver más detalles</button>
+                      <button class="btn btn-link rotate">Ver familia</button>
+                      <button class="btn btn-link">Editar</button>
+                      <button class="btn btn-danger">Eliminar</button>
+                  </div>
+              </div>
+              <!-- Back side: Datos del Padre -->
+              <div class="back d-none">
+                  <h2 class="card-title">Datos del Padre</h2>
+                  <div class="mb-3"><strong>Nombre:</strong> Carlos</div>
+                  <div class="mb-3"><strong>Apellidos:</strong> Gómez Ruiz</div>
+                  <div class="mb-3"><strong>DNI:</strong> 87654321B</div>
+                  <div class="mb-3"><strong>Correo:</strong> carlos@example.com</div>
+                  <div class="mb-3"><strong>Teléfono:</strong> 600123456</div>
+                  <div class="mb-3"><strong>Estado Civil:</strong> Casado</div>
+
+                  <!-- Botones -->
+                  <div class="botones">
+                      <button class="btn btn-link detallesBtn">Ver más detalles</button>
+                      <button class="btn btn-link rotate">Ver niño</button>
+                      <button class="btn btn-link">Editar</button>
+                      <button class="btn btn-danger">Eliminar</button>
+                  </div>
+              </div>
+          </div>

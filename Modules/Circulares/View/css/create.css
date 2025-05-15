@@ -1,0 +1,101 @@
+
+/* ************************************** /
+/* UPLOAD FILES */
+/* ************************************** /
+
+/* From Uiverse.io by Yaya12085 */
+.createModal .fileUploader {
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 5px;
+    background-color: rgba(0, 110, 255, 0.041);
+}
+
+.createModal .fileUploader .header {
+    flex: 1;
+    width: 100%;
+    border: 2px dashed royalblue;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.createModal .fileUploader .header svg {
+    height: 100px;
+}
+
+.createModal .fileUploader .header p {
+    text-align: center;
+    color: black;
+}
+
+.createModal .fileUploader .footer {
+    background-color: rgba(0, 110, 255, 0.075);
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    border: none;
+}
+
+.createModal .fileUploader .footer svg {
+    height: 130%;
+    fill: royalblue;
+    background-color: rgba(70, 66, 66, 0.103);
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.205);
+}
+
+.createModal .fileUploader .footer p {
+    flex: 1;
+    text-align: center;
+}
+
+.createModal .fileUploader #file {
+    display: none;
+}
+
+#archivoEliminar {
+    cursor: pointer;
+    margin-left: 10px;
+    color: red;
+    font-size: 30px;
+}
+
+#archivoEliminar:hover {
+    color: darkred;
+}
+
+.fileUploader .header i,
+.fileUploader .footer i {
+    font-size: 40px;
+    /* Tamaño más grande del icono */
+    margin-right: 10px;
+    /* Espaciado entre el icono y el texto */
+}
+
+.fileUploader .footer i#archivoIcono {
+    font-size: 32px;
+    /* Aumentamos un poco más el tamaño del icono del archivo */
+}
+
+.fileUploader.drag-over {
+    background-color: #f0f8ff;
+    border: 2px dashed #007bff;
+    transition: background-color 0.2s ease;
+}

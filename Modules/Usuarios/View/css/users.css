@@ -1,0 +1,146 @@
+/* Asegura que la tabla se pueda desplazar horizontalmente */
+#tablaUsuarios_wrapper {
+    overflow-x: auto;
+}
+
+#tablaUsuarios {
+    width: 100%;
+    table-layout: fixed;
+    /* Esto asegura que las celdas de la tabla no se desborden */
+}
+
+.display-rol,
+.display-rama {
+    cursor: pointer;
+    text-decoration: underline dotted;
+}
+
+#mainContent {
+    margin-top: 20vh !important;
+}
+
+
+#mainContent h1 {
+    font-weight: 900;
+    font-size: 35px;
+}
+
+#guardarCambios {
+    border-radius: 40px;
+    padding: 15px;
+    text-transform: uppercase;
+    box-shadow: 7px 7px 18px 0px black;
+    border: none;
+}
+
+#guardarCambios:hover {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+td {
+    overflow: hidden;
+}
+
+#filtrarModificados {
+    border-radius: 40px;
+    padding: 15px;
+    text-transform: uppercase;
+    box-shadow: 7px 7px 18px 0px black;
+    border: none;
+}
+
+#filtrarModificados:hover {
+    background-color: #ffc107;
+    color: black;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+/* **********************************************************/
+/* Estilo para la tabla de usuarios cuando hay cambios */
+/* **********************************************************/
+tr.modificado {
+    border-left: 4px solid #0bcc04;
+}
+
+tr.modificado td {
+    background-color: #ebe0c2 !important;
+}
+
+/* Cuando hay un error (rama no seleccionada) */
+tr.fila-error {
+    border-left: 4px solid #dc3545;
+}
+
+tr.fila-error td {
+    background-color: #f8d7da !important;
+}
+
+/* Select con error */
+select.is-invalid {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+}
+
+.swal2-icon {
+    margin: auto !important;
+    margin-top: 15px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ***********************************************************/
+/* Estilo para el icono (incompatibilidad con bootstrap...) */
+/* ***********************************************************/
+
+
+.swal2-icon-content {
+    margin: 0 auto;
+    font-size: 3rem;
+}
+
+/* ***********************************************************/
+/* Estilo para el modal para editar usuario */
+/* ***********************************************************/
+
+
+input.is-invalid,
+select.is-invalid {
+  color: #dc3545;
+}
+
+label.is-invalid {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* ***********************************************************/
+/* Estilo para que no salga icono en editar */
+/* ***********************************************************/
+
+.swal2-popup.no-icon .swal2-icon {
+    display: none !important;
+}
+  
+
+.table-custom {
+    --bs-table-color: #fff;
+    --bs-table-bg: #800080d9;  /* Púrpura */
+    --bs-table-border-color: #4d5154;
+    --bs-table-striped-bg: #2c3034;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #373b3e;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #323539;
+    --bs-table-hover-color: #fff;
+    color: var(--bs-table-color);
+    border-color: var(--bs-table-border-color);
+}

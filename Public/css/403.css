@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.restricted-container {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  position: relative;
+  margin: 13rem 0rem;
+}
+
+.restricted-lock {
+  position: relative;
+  margin: 0 auto 20px;
+  border-radius: 5px;
+  width: 55px;
+  height: 45px;
+  background-color: #333;
+  animation: dip 1s;
+}
+
+.restricted-lock::before,
+.restricted-lock::after {
+  content: '';
+  position: absolute;
+  border-left: 5px solid #333;
+  height: 20px;
+  width: 25px;
+  left: calc(50% - 12.5px);
+}
+
+.restricted-lock::before {
+  top: -24px;
+  border: 5px solid #333;
+  border-bottom-color: transparent;
+  border-radius: 15px 15px 0 0;
+  height: 30px;
+  animation: lock 1s, spin 1s;
+}
+
+.restricted-lock::after {
+  top: -10px;
+  border-right: 5px solid transparent;
+  animation: spin 1s;
+}
+
+.restricted-message h1 {
+  margin: 40px 0 20px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.restricted-message p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Animaciones */
+@keyframes lock {
+  0% {
+    top: -40px;
+  }
+  65% {
+    top: -40px;
+  }
+  100% {
+    top: -24px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: scaleX(-1);
+    left: calc(50% - 30px);
+  }
+  65% {
+    transform: scaleX(1);
+    left: calc(50% - 12.5px);
+  }
+}
+
+@keyframes dip {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,479 @@
+#main {
+  margin-top: 7rem !important;
+  min-height: calc(100vh - 150px);
+  /* Ajusta según la altura de tu header y footer */
+  padding: 2rem 0;
+  /* Espaciado superior e inferior */
+}
+
+.mx-auto {
+  margin: 10px !important;
+  box-shadow: 10px 10px 35px;
+}
+
+.datosMultiple {
+  width: 100%;
+}
+
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.botones:nth-child(3) {
+  grid-row-start: 2;
+}
+
+.botones:nth-last-child() {
+  grid-row-start: 2;
+}
+
+.side-bar {
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 12px;
+  /* Ancho de la franja */
+  height: 100%;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.mx-auto .lobatos {
+  background-color: yellow;
+}
+
+.mx-auto .exploradores {
+  background-color: blue;
+}
+
+.mx-auto .pioneros {
+  background-color: red;
+}
+
+.mx-auto .rutas {
+  background-color: green;
+}
+
+.mx-auto .card-body {
+  margin-left: 7px;
+}
+
+/* ********************************* */
+/* MODAL DATOS DINAMICOS */
+/* ********************************* */
+
+#modalContent {
+  padding: 20px;
+}
+
+/* ********************************* */
+/* BOTON CREAR */
+/* ********************************* */
+/* From Uiverse.io by NorthFishHasNa */
+#create button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #3d405b;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 16px;
+  width: 200px;
+  min-width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+#create button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#create button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+#create button:hover span {
+  padding-right: 15px;
+}
+
+#create button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/* MODAL REGISTRAR ASOCIADOS*/
+.modal-body {
+  padding: 0px !important;
+
+}
+
+/* Aumentar el tamaño del modal */
+.custom-modal-size {
+  max-width: 800px;
+
+}
+
+/* Ajustar el iframe dentro del modal */
+.iframe-custom {
+  width: 100%;
+  height: 75vh;
+}
+
+
+
+#registros {
+  width: 180px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .d-flex {
+    flex-direction: column-reverse;
+  }
+}
+
+/* ********************************* */
+/* OPCIONES PARA ORDENAR */
+/* ********************************* */
+
+.ordenCards {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 8px;
+}
+
+.filtrosOrden {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.filtrosOrden .form-control {
+  width: 93% !important;
+}
+
+#closeFilters {
+  display: none;
+}
+
+/* ********************************* */
+/* BOTON PARA QUITAR FILTROS */
+/* ********************************* */
+
+/* From Uiverse.io by javierBarroso */
+.button {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border: none;
+  background: rgba(180, 83, 107, 0.849);
+  border-radius: 5px;
+  transition: background 0.5s;
+  padding: 15px;
+}
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.close {
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -150%;
+  left: 50%;
+  width: 3em;
+  height: 3.7em;
+  font-size: 12px;
+  background-color: rgb(19, 22, 24);
+  color: rgb(187, 229, 236);
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.button:hover {
+  background-color: rgb(211, 21, 21);
+}
+
+.button:active {
+  background-color: rgb(130, 0, 0);
+}
+
+.button:hover>.close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+/* ********************************* */
+/* BUSCADOR ANIMADO */
+/* ********************************* */
+/* From Uiverse.io by satyamchaudharydev */
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #2f2ee9;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg, #fff);
+}
+
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* close button shown when typing */
+input:not(:placeholder-shown)~.reset {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+
+
+
+/** ********************************* */
+/* LOADER */
+/* ********************************* */
+
+#loaderEdit {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* From Uiverse.io by G4b413l */
+.leap-frog {
+  --uib-size: 40px;
+  --uib-speed: 2s;
+  --uib-color: rgb(37, 37, 149);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--uib-size);
+  height: var(--uib-size);
+}
+
+.leap-frog__dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.leap-frog__dot::before {
+  content: '';
+  display: block;
+  height: calc(var(--uib-size) * 0.22);
+  width: calc(var(--uib-size) * 0.22);
+  border-radius: 50%;
+  background-color: var(--uib-color);
+  will-change: transform;
+}
+
+.leap-frog__dot:nth-child(1) {
+  animation: leapFrog var(--uib-speed) ease infinite;
+}
+
+.leap-frog__dot:nth-child(2) {
+  transform: translateX(calc(var(--uib-size) * 0.4));
+  animation: leapFrog var(--uib-speed) ease calc(var(--uib-speed) / -1.5) infinite;
+}
+
+.leap-frog__dot:nth-child(3) {
+  transform: translateX(calc(var(--uib-size) * 0.8)) rotate(0deg);
+  animation: leapFrog var(--uib-speed) ease calc(var(--uib-speed) / -3) infinite;
+}
+
+@keyframes leapFrog {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  33.333% {
+    transform: translateX(0) rotate(180deg);
+  }
+
+  66.666% {
+    transform: translateX(calc(var(--uib-size) * -0.4)) rotate(180deg);
+  }
+
+  99.999% {
+    transform: translateX(calc(var(--uib-size) * -0.8)) rotate(180deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+
+
+.select2-container--open {
+  z-index: 999999 !important;
+}
+
+.select2-dropdown {
+  z-index: 999999 !important;
+}
+
+/* ***********************************************************/
+/* Estilo para el icono (incompatibilidad con bootstrap...) */
+/* ***********************************************************/
+
+.swal2-icon {
+  width: 100% !important;
+}
+
+.swal2-icon-content {
+  margin: 0 auto;
+  font-size: 3rem;
+}
+
+/* ***********************************************************/
+/* Estilo para el edit modal */
+/* ***********************************************************/
+
+
+.swal-wide .swal2-html-container {
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding: 20px;
+}
+
+.swal-wide .swal2-html-container .mb-2 {
+  padding: 4px;
+}
+
+.swal-wide .swal2-html-container .mb-2 label {
+  margin-bottom: 10px;
+}
+
+.swal-wide .swal2-html-container h5 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}

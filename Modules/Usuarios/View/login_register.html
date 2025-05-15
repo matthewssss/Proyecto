@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LogIn</title>
+    <base href="/Modules/Usuarios/View/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../Vendor/Frontend/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../Vendor/Frontend/SweetAlert/sweetalert2.min.css">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="form">
+        <ul class="tab-group">
+          <li class="tab active">
+            <a
+              href="#login"
+              style="border-radius: 15px !important; margin-right: 8px"
+              >Iniciar sesión</a
+            >
+          </li>
+          <li class="tab">
+            <a
+              href="#signup"
+              style="border-radius: 15px !important; margin-left: 8px"
+              >Registrarse</a
+            >
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div id="login" class="active">
+            <h1>¡Bienvenido de nuevo!</h1>
+            <form action="/" method="post" id="loginForm">
+              <div class= "error errorLog" ></div>
+              <div class="field-wrap">
+                <label for="">Correo electrónico:</label>
+                <input type="email" id="id_email" name="email" placeholder="Correo electrónico" />
+              </div>
+              <div class="field-wrap">
+                <label for="id_psw0">Contraseña</label>
+                <br>
+                <span id="error-password"></span>
+                <div id="password-container">
+                  <input type="password" id="id_psw0" name="password" placeholder="Contraseña" />
+                  <div id="password-display" class="password-display"></div>
+                </div>
+                <label class="show-password">
+                  <input type="checkbox" id="toggle-password" />
+                  <span>Mostrar contraseña</span>
+                </label>                
+              </div>
+                          
+              <p class="forgot">
+                <a id="id_forgot"
+                  >¿Olvidaste tu contraseña?</a
+                >
+              </p>
+              <button class="button button-block" id="id_login">Iniciar sesión</button>
+            </form>
+          </div>
+          
+          <div id="signup">
+            <h1>Registrarse</h1>
+            <form action="/" method="post" id="signin">
+              <span class="error errorLog"></span>
+              <div class="field-wrap">
+                <label for="">Nombre:</label>
+                <input type="text" id="id_name" name="nombre" placeholder="Nombre" />
+              </div>
+              <div class="field-wrap">
+                <label for="">Apellido:</label>
+                <input type="text" id="id_apellido" name="apellido" placeholder="Apellido" />
+              </div>
+              <div class="field-wrap">
+                <label for="">Correo:</label>
+                <input
+                  type="email"
+                  id="id_email_logup"
+                  name="email"
+                  placeholder="Dirección de correo electrónico"
+                />
+              </div>
+              <div class="field-wrap">
+                <label for="">Telefono:</label>
+                <input type="tel" id="id_tlf" name="telefono" placeholder="123 45 67 89" />
+              </div>
+              <div class="field-wrap">
+                <label for="id_psw1">Contraseña:</label>
+                <br>
+                <div id="passwordErr"></div>
+                <div id="password-container1">
+                  <input type="password" id="id_psw1" name="password1" placeholder="Contraseña" />
+                  <div id="password-display1" class="password-display"></div>
+                </div>
+              </div>
+              <div class="field-wrap">
+                <label for="id_psw2">Repita contraseña:</label>
+                <br>
+                <div id="passwordErr2"></div>
+                <div id="password-container2">
+                  <input type="password" id="id_psw2" name="password2" placeholder="Contraseña" />
+                  <div id="password-display2" class="password-display"></div>
+                </div>
+              </div>
+              <div class="field-wrap">
+                <label class="show-password">
+                  <input type="checkbox" id="toggle-password-logup" />
+                  <span>Mostrar contraseña</span>
+                </label>
+              </div>
+              
+
+              <button id="id_logup" class="button button-block">
+                Registrarse
+              </button>
+            </form>
+          </div>
+
+          <div id="forgot">
+            <h1>Ayuda de contraseña</h1>
+            <form action="/" method="post" id="resetPassword">
+              <div class="field-wrap">
+                <label for="">Correo electrónico:</label>
+                <input type="email" id="id_email_forgot" name="email" placeholder="Correo electrónico" />
+              </div>
+              <button class="button button-block" id="id_forgot_psw">Restablecer contraseña</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../../Vendor/Frontend/Jquery/jquery.min.js"></script>
+    <script src="../../../Vendor/Frontend/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../Vendor/Frontend/jQueryValidation/jquery.validate.min.js"></script>
+    <!-- SWEET ALERT 2 -->
+    <script src="../../../Vendor/Frontend/SweetAlert/sweetalert2.min.js"></script>
+    <script src="../Controllers/login-min.js"></script>
+    <script src="../Controllers/validateForms-min.js"></script>
+  </body>
+</html>

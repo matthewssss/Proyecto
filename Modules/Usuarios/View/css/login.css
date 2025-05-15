@@ -1,0 +1,281 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300);
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  overflow-y: auto;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(0, 0, 0, -0.5);
+  padding: 0px !important;
+  margin: 0px !important;
+  height: 130vh;
+}
+#main a {
+  text-decoration: none;
+  color: #01939c;
+  transition: 0.5s ease;
+}
+#main a:hover {
+  color: #179b77;
+}
+
+.form {
+  background: #12141d;
+  padding: 40px;
+  width: 100%;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#main .tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 48%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+#main .tab-group li a:hover {
+  background: #01939c;
+  color: #fff;
+}
+#main .tab-group .active a {
+  background: #01939c;
+  color: #fff;
+}
+
+.tab-content {
+  position: relative;
+}
+
+.tab-content > div:nth-child(2) {
+  display: none;
+}
+.tab-group {
+  border-radius: 15px !important;
+  margin: 20px;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+
+label {
+  color: white;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  font-size: 17px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #01939c;
+  color: #fff;
+  border-radius: 6px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+textarea {
+  border: 2px solid #01939c;
+  resize: vertical;
+}
+.field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+.top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.top-row > div:last-child {
+  margin: 0;
+}
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 15px;
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  background: #01939c;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.5s ease;
+  /*-webkit-appearance: none;*/
+}
+.button:hover,
+.button:focus {
+  background: #025c61;
+}
+.button-block {
+  display: block;
+  width: 100%;
+}
+.forgot {
+  margin-top: -20px;
+  text-align: right;
+  cursor: pointer;
+}
+
+#id_forgot:hover {
+  color: #01939c;
+}
+
+
+#password-container {
+  border: 1px solid #01939c;
+  color: #fff;
+  border-radius: 6px;
+}
+
+#password-container input {
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-bottom: 1px solid #01939c;
+
+}
+
+
+
+/* Estilos para el contenedor del checkbox y su texto */
+.show-password {
+  display: flex;
+  align-items: center;
+  gap: 8px;         /* Espacio entre el checkbox y el texto */
+  margin: 10px; /* Espacio respecto al input de contraseña */
+  color: white;
+  font-size: 16px;  /* Ajusta según prefieras */
+}
+
+/* Opcional: si quieres reducir el tamaño del checkbox o personalizarlo */
+.show-password input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+
+/* Recuadro que muestra la contraseña, inicialmente oculto */
+.password-display {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  background-color: #12141d;
+  color: #ffffff;
+  margin-top: 5px;
+  border-radius: 5px;
+  /* Sin padding inicial para que max-height: 0 funcione bien */
+  padding: 0 10px;
+  margin: 0px;
+}
+
+/* Clase que se agrega cuando se muestra el recuadro: se expande */
+.password-display.show {
+  max-height: 100px; /* Ajusta según lo que necesites */
+  padding: 8px;
+  padding-left: 8px;
+}
+
+
+/* Contenedor para cada input y su recuadro */
+#password-container1,
+#password-container2 {
+  border: 1px solid #01939c;
+  color: #fff;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para el input */
+#password-container1 input,
+#password-container2 input {
+  width: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  color: #fff;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #01939c;
+}
+
+/* CONTASEÑA OLVIDADA */
+#login {
+  transform: rotateY(0deg);
+  position: relative;
+  height: 100vh;
+  /* Puedes quitar transition si usas animación */
+}
+
+#forgot {
+  position: absolute;
+  top: 0;
+  transform: rotateY(180deg);
+  z-index: -1;
+  width: 100%;
+  /* Puedes quitar transition si usas animación */
+}
+
+@media only screen and (max-width: 715px) {
+  .tab-group li a {
+      float: none !important;
+      width: 100% !important;
+      margin: 10px !important;
+      text-align: center;
+  }
+  .tab-group li {
+      width: 100%;
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes backflip {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+.error {
+  color: red; /* Cambia el color del mensaje */
+  font-size: 14px;
+  font-weight: bold;
+}

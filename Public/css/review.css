@@ -1,0 +1,25 @@
+.action-menu {
+    display: inline-block;
+    position: relative;
+}
+
+.action-dropdown {
+    position: absolute;
+    top: 30px;  /* Ajusta según la altura del icono */
+    right: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100;
+}
+
+.action-dropdown button {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.action-dropdown button:last-child {
+    margin-bottom: 0;
+}

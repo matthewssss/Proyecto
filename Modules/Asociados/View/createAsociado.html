@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear asociado</title>
+  <base href="/Modules/Asociados/View/">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../../Vendor/Frontend/Bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../../Vendor/Frontend/FontAwesome/css/fontawesome.css">
+  <link rel="stylesheet" href="../../../Vendor/Frontend/FontAwesome/css/all.css">
+  <link rel="stylesheet" href="../../../Vendor/Frontend/Select2/css/select2.min.css" />
+  <link rel="stylesheet" href="../../../Vendor/Frontend/SweetAlert/sweetalert2.min.css">
+
+  <!-- CSS PROPIO -->
+  <link rel="stylesheet" href="css/create.css">
+</head>
+
+<body class="bg-light">
+  <div id="backgroundColor"></div>
+  <div id="formMain">
+    <div class="stepwizard col-md-offset-3">
+      <div class="stepwizard-row setup-panel">
+        <div class="stepwizard-step">
+          <a href="#step-1" type="button" class="btn btn-primary">1</a>
+          <p>Datos Personales</p>
+        </div>
+        <div class="stepwizard-step">
+          <a href="#step-2" type="button" class="btn btn-default" disabled="disabled">2</a>
+          <p>Dirección</p>
+        </div>
+        <div class="stepwizard-step">
+          <a href="#step-3" type="button" class="btn btn-default" disabled="disabled">3</a>
+          <p>Datos del Padre/Tutor</p>
+        </div>
+      </div>
+    </div>
+
+    <form role="form" id="asociadoForm">
+      <!-- Step 1: Datos Personales -->
+      <div class="row setup-content" id="step-1">
+        <div class="col-xs-12 col-md-8 mx-auto">
+          <div class="col-md-12">
+            <h3>Datos Personales del Asociado</h3>
+            <div class="form-group mb-3">
+              <label class="control-label">Nombre</label>
+              <input maxlength="100" type="text" required class="form-control" name="nombre" id="nombre">
+            </div>
+            <div class="form-group mb-3">
+              <label class="control-label">Apellidos</label>
+              <input maxlength="100" type="text" required class="form-control" name="apellidos" id="apellidos">
+            </div>
+            <div class="form-group mb-3">
+              <label class="control-label">DNI</label>
+              <input maxlength="9" type="text" required class="form-control" name="DNI" id="DNI">
+            </div>
+            <div class="form-group mb-3">
+              <label class="control-label">Fecha de Nacimiento</label>
+              <input type="date" required class="form-control" name="fecha_nacimiento" id="fecha_nacimiento">
+            </div>
+            <div class="form-group mb-3">
+              <label class="control-label">Edad</label>
+              <input type="number" readonly class="form-control" name="edad" id="edad">
+            </div>
+            <div class="form-group mb-3">
+              <label class="control-label">Unidad</label>
+              <input type="text" readonly class="form-control" name="unidad" id="unidad">
+            </div>
+            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button"
+              id="id_btnSiguiente">Siguiente</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Ubicación -->
+      <div class="row setup-content" id="step-2">
+        <div class="col-xs-12 col-md-8 mx-auto">
+          <div class="col-md-12">
+            <h3>Datos de Ubicación</h3>
+            <div class="form-group mb-3">
+              <label class="control-label">Comunidad Autónoma</label>
+              <select id="comunidad_autonoma" class="form-control">
+
+              </select>
+            </div>
+
+            <div class="form-group mb-3">
+              <label class="control-label">Provincia</label>
+              <select id="provincia" class="form-control">
+
+              </select>
+            </div>
+
+            <div class="form-group mb-3">
+              <label class="control-label">Municipio</label>
+              <select id="municipio" class="form-control">
+
+              </select>
+            </div>
+
+            <button class="btn btn-primary prevBtn btn-lg pull-left" type="button">Anterior</button>
+            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Siguiente</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Datos del Padre -->
+      <div class="row setup-content" id="step-3">
+        <div class="col-xs-12 col-md-8 mx-auto">
+          <div class="col-md-12">
+            <h3>Datos del Padre/Tutor</h3>
+            <div class="form-group mb-3">
+              <label class="control-label">Nombre</label>
+              <input type="text" required class="form-control" name="nombre_padre" id="nombre_padre">
+            </div>
+            <div class="form-group mb-3">
+              <label class="control-label">Apellidos</label>
+              <input type="text" required class="form-control" name="apellidos_padre" id="apellidos_padre">
+            </div>
+            <div class="form-group mb-3">
+              <label class="control-label">DNI</label>
+              <input maxlength="9" type="text" required class="form-control" name="dni_padre" id="dni_padre">
+            </div>
+            <div class="form-group mb-3">
+              <label class="control-label">Correo Electrónico</label>
+              <input type="email" required class="form-control" name="correo_padre" id="correo_padre">
+            </div>
+            <div class="form-group mb-3">
+              <label class="control-label">Teléfono</label>
+              <input type="tel" required class="form-control" name="telefono_padre" id="telefono_padre">
+            </div>
+            <div class="form-group mb-3">
+              <label class="control-label">Estado Civil</label>
+              <select class="form-control" required name="estado_civil" id="estado_civil">
+                <option value="">Seleccione...</option>
+                <option value="Soltero/a">Soltero/a</option>
+                <option value="Casado/a">Casado/a</option>
+                <option value="Divorciado/a">Divorciado/a</option>
+                <option value="Viudo/a">Viudo/a</option>
+              </select>
+            </div>
+            <button class="btn btn-primary prevBtn btn-lg pull-left" type="button">Anterior</button>
+            <button class="btn btn-success btn-lg pull-right" type="submit" id="guardarDatos">Guardar</button>
+            <div id="tooltipSimulado">
+              Aquí aparecerán los errores
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!--SCRIPTS-->
+  <!-- ********* Scripts ********* -->
+  <!-- JQUERY-->
+  <script src="../../../Vendor/Frontend/Jquery/jquery.min.js"></script>
+  <script src="../../../Vendor/Frontend/Jquery/jquery.js"></script>
+  <!-- JQUERY UI-->
+  <script src="../../../Vendor/Frontend/JqueryUI/jquery-ui.js"></script>
+  <!-- JQUERY VALIDATE-->
+  <script src="../../../Vendor/Frontend/jQueryValidation/jquery.validate.min.js"></script>
+  <!-- BOOTSTRAP -->
+  <script src="../../../Vendor/Frontend/Bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ISOTOPE-->
+  <script src="../../../Vendor/Frontend/Isotope/isotope.pkgd.js"></script>
+  <!-- BOOTSTRAP -->
+  <script src="../../../Vendor/Frontend/Bootstrap/js/bootstrap.min.js"></script>
+  <!-- JQUERY SELECT -->
+  <script src="../../../Vendor/Frontend/Select2/js/select2.min.js"></script>
+  <!-- SWEET ALERT 2 -->
+  <script src="../../../Vendor/Frontend/SweetAlert/sweetalert2.min.js"></script>
+
+  <!-- MOSTRAR POPUPS -->
+  <script src="../../../Public/js/popup-min.js"></script>
+  <!-- JS PROPIO -->
+  <script src="../../../Controllers/loadUserMenu-min.js"></script>
+  <script src="../Controllers/validateForm-min.js"></script>
+  <script src="../Controllers/createController-min.js"></script>
+  <script src="../Controllers/form-utils-min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+# Activar mod_rewrite
+RewriteEngine On
+
+# Páginas de error personalizadas
+ErrorDocument 404 /Public/errorPages/404.html
+ErrorDocument 403 /Public/errorPages/403.html
+ErrorDocument 500 /Public/errorPages/500.html
+
+# Permitir el acceso solo a módulos específicos
+RewriteRule ^Modules/(Usuarios|Circulares|Asociados|Global)(/.*)?$ - [L]
+
+# Bloquear acceso directo a /Modules y subcarpetas si no son los anteriores
+RewriteRule ^Modules(/.*)?$ /404 [L]
+
+# Página principal
+RewriteRule ^inicio$ /index.html [L,NC]
+
+# Rutas amigables
+RewriteRule ^sobre-nosotros$ /Public/pages/conocenos.html [L,NC]
+RewriteRule ^raices-scout$ /Public/pages/raices.html [L,NC]
+RewriteRule ^ramas$ /Public/pages/ramas.html [L,NC]
+RewriteRule ^users$ /Public/pages/users.html [L,NC]
+
+# Rutas visibles de módulos
+RewriteRule ^usuarios$ /Modules/Usuarios/View/Users.html [L,NC]
+RewriteRule ^kraal$ /Modules/Usuarios/View/Kraal.html [L,NC]
+RewriteRule ^circulares$ /Modules/Circulares/View/index.html [L,NC]
+RewriteRule ^panel-circulares$ /Modules/Circulares/View/reviewCirculares.html [L,NC]
+RewriteRule ^asociados$ /Modules/Asociados/View/index.html [L,NC]
+
+# Iframes
+RewriteRule ^nuevo-asociado$ /Modules/Asociados/View/createAsociado.html [L,NC]
+RewriteRule ^login-register$ /Modules/Usuarios/View/login_register.html [L,NC]
+RewriteRule ^menu-perfil$ /Modules/Usuarios/View/profileMenu.html [L,NC]
+
+# Rutas de error personalizadas
+RewriteRule ^403$ /Public/errorPages/403.html [L,NC]
+RewriteRule ^404$ /Public/errorPages/404.html [L,NC]
+RewriteRule ^500$ /Public/errorPages/500.html [L,NC]
+
+# Bloquear acceso a carpetas sensibles si no es desde tu sitio
+RewriteCond %{REQUEST_URI} ^/(Modules|Public|Vendor|Models|Mail|Controllers|Config)(/.*)?$ [NC]
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?gruposcout\.online/ [NC]
+# Evita bucles con rutas de error personalizadas
+RewriteRule ^(404|403|500|400)$ - [L]
+
+# Si no existe archivo ni carpeta real, mostrar error
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /404 [L]
+
+RewriteRule ^(Test|node_modules)(/.*)?$ /404 [L,NC]
+
+RewriteRule (^|/)dev-js(/|$) - [F,L]
